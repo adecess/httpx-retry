@@ -1,11 +1,12 @@
-import httpx
 import asyncio
+
+from client.async_client_retry import AsyncClientWithRetry
 
 
 async def main():
-    async with httpx.AsyncClient() as client:
-        r = await client.get("https://www.example.com/")
-        print(r)
+    client = AsyncClientWithRetry()
+    r = await client.request("GET", "https://www.example.com/")
+    print(r)
 
 
 if __name__ == "__main__":
