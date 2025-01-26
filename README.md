@@ -5,7 +5,7 @@ This is a Python HTTP client based on `httpx.AsyncClient` with an exponential ba
 ## Features
 
 - Async HTTP requests
-- Exponential backoff
+- Exponential backoff with a 0.5 factor
 - Robust error handling
 
 ## Exponential Backoff Strategy
